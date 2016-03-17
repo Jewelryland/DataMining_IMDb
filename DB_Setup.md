@@ -4,8 +4,8 @@ Transferring IMDB dataset plain text files to MySQL server is an essential step 
 I went through installing and running MySQL server on my machine. 
 I am using OS X 10.11 64bit as the OS platform. 
 In order to this long process to run, it requires the memory to have at least 4 GB of free space as a partition.
-We will also be using IMDbPy, a python based package. Of course, this library needs us to have Python installed on our machine as well as its development tools along with SQLObject. 
-After installing required software, we will have to download all files from IMDb site: ftp://ftp.fu-berlin.de/pub/misc/movies/database/. Then, we can go ahead and create database and begin importing process. 
+We will also be using IMDbPy, a python based package. Of course, this library needs us to have Python installed on our machine as well as its development tools along with SQLObject. After installing required software, we will have to download all files from IMDb site: ftp://ftp.fu-berlin.de/pub/misc/movies/database/. 
+Then, we can go ahead and create database and begin importing process. 
 
 
 # Steps for installing IMDbPy and SQLObject :
