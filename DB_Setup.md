@@ -26,3 +26,4 @@ sudo easy_install pip
 
 We are aware that –d is the directory where .gz files are located and –u is the database connection string for the MySQL database. A screenshot of the output is given below:
 
+![Screenshot](setup.png)
