@@ -8,7 +8,7 @@ We will also be using IMDbPy, a python based package. Of course, this library ne
 Then, we can go ahead and create database and begin importing process. 
 
 #steps for database installation:
-link - http://imdbpy.sourceforge.net/docs/README.sqldb.txt
+link - http://imdbpy.sourceforge.net/docs/README.sqldb.txt 
 Select a mirror of the "The Plain Text Data Files" from
 the http://www.imdb.com/interfaces/ page and download
 every file in the main directory (beware that the "diffs"
@@ -38,19 +38,14 @@ Where 'scheme' is one in "sqlite", "mysql", "postgres", "firebird",
 "interbase", "maxdb", "sapdb", "mssql", "sybase", "ibm_db_sa".
 
 Some examples:
-    mysql://user:password@host/database
-    postgres://user:password@host/database
-    mysql://host/database?debug=1
-    postgres:///full/path/to/socket/database
-    postgres://host:5432/database
-    sqlite:///full/path/to/database
-    sqlite:/C|/full/path/to/database
-    sqlite:/:memory:
-
-For other information you can read the SQLObject/SQLAlchemy documentation.
-You can force the use of SQLObject or SQLAlchemy with the '-o' command
-line option (i.e.: "-o sqlobject" or "-o sqlalchemy" or a list of comma
-separated values to specify an order of preference).
+    mysql://user:password@host/database , 
+    postgres://user:password@host/database , 
+    mysql://host/database?debug=1 , 
+    postgres:///full/path/to/socket/database , 
+    postgres://host:5432/database , 
+    sqlite:///full/path/to/database , 
+    sqlite:/C|/full/path/to/database , 
+    sqlite:/:memory: , 
 
 
 
