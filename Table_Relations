@@ -1,0 +1,6 @@
+So far i have found a few relations between the tables: The tables are. 
+1) role_type - cast_info - comp_cast_type
+2) info_type - movie_info
+3)company_type - movie_companies
+
+just go through them once more to check if i missed out anything. There will surely be more relations also which we need to find. 
