@@ -1,6 +1,8 @@
 So far i have found a few relations between the tables: The tables are. 
 1) role_type - cast_info - comp_cast_type
-2) info_type - movie_info
+2) info_type - movie_info - movie_info_idx (check for difference between movie_info & movie_info_idx since I don't have
+the entries for that table.)
 3)company_type - movie_companies
 
+Most probably the tables of 1 and 2 will also be related to each other. But I don't have them so can't confirm. 
 just go through them once more to check if i missed out anything. There will surely be more relations also which we need to find. 
