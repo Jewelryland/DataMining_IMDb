@@ -1,0 +1,39 @@
+The following are the differences between the tables in the link and our tables respectively:
+
+	Table name 		Our table doesn't have		Their table doesn't have
+
+1) 	name			person_id			gender
+
+2)	role_type		role_id
+
+3) 	char_name		person_role_id
+
+4)	comp_cast_type		status_id, subject_id
+
+5)	company_type		company_type_id
+
+6) 	company_name		company_id
+
+7) 	info_type		info_type_id
+
+8) 	link_type		link_type_id
+
+9)	kind_type		kind_id
+
+10) 	title			movie_id, linked_movie_id,
+
+
+my observations:
+1) person id is in our person_info table
+2) I have role_id in cast_info table
+3) I have as well person_role_id in cast_info table
+4) I have status_id and subject_id in complete _cast table
+5) I have company_type_id in the movie_companies table
+6) I have company_id in the movie_companies table
+7) I have info_type_id in the person_info table
+8) I have link_type_id in the movie_link table
+9) I have kind_id in the aka_title and title tables
+10) I have linked_movie_id in the movie_link and movie_id in cast_info, complete_cast, movie_companies, movie_info, movie_link and aka_title;
+
+I guess it depends on the relationship. Here we have all of them one to many relationships, so an attribute needs to be on the side of n entity (table)
+				
