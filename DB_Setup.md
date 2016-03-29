@@ -68,3 +68,7 @@ sudo easy_install pip
 We are aware that –d is the directory where .gz files are located and –u is the database connection string for the MySQL database. A screenshot of the output is given below:
 
 ![Screenshot](Setup.png)
+
+
+Given a .sql file , to import into mysql on a local system - 
+mysql -u username -p -h localhost databasename < filename.sql
