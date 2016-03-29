@@ -14,3 +14,8 @@ mysql> show tables;
 mysql> desc table_name;
 ```
 
+For getting a formatted output-
+
+```
+mysql> Select * from table_name \G
+```
