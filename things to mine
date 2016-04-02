@@ -1,0 +1,27 @@
+Things we mine :
+
+Name :
+
+1. Number of males/ females - actors, directors, actresses (link with role_type, use gender attribute)
+2. Average / max / min number of movies dependent on gender ? (find number for actor/ actress) (link with role type and title)
+3. Cluster actors/ actresses to find people competing against each other (using similarity measured using country, genre of movie, production year, and maybe 
+
+Movie Companies :
+
+1. Number of companies (distribution/ production, etc.) for each country (use note attribute and link with company_type)
+2. Which company has produced/ distributed most number of movies - which country is it from ?
+3. Do companies produce/ distribute most movies only for specific actors? Which are they?
+4. 
+
+Movie Info :
+
+Where info typeid = 3 - it gives genre of movie
+
+1. Cluster by identifying which movie genres are most popular in what decades/ years ...?
+2. Visualization of frequency distribution of movie genres by decade / country for different genres (use info column from movie info)
+
+Link_Type :
+
+1. Find which genre movies are translated into other languages the most (use link_type id = 17 ... alternate laguage version of)
+
+
