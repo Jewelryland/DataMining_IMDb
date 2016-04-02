@@ -19,9 +19,10 @@ Where info typeid = 3 - it gives genre of movie
 
 1. Cluster by identifying which movie genres are most popular in what decades/ years ...?
 2. Visualization of frequency distribution of movie genres by decade / country for different genres (use info column from movie info)
+3. cluster tv series (number/ genre)
 
 Link_Type :
 
-1. Find which genre movies are translated into other languages the most (use link_type id = 17 ... alternate laguage version of)
-
+1. Find which genre movies are translated into other languages the most (use link_type id = 17 ... alternate language version of)
+2. 
 
