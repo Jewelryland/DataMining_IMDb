@@ -28,3 +28,6 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 ```
 
+```
+select name,count(id) from name group by name having count(id)>1;
+```
