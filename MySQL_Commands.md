@@ -31,3 +31,8 @@ LINES TERMINATED BY '\n'
 ```
 select name,count(id) from name group by name having count(id)>1;
 ```
+Example of joining mulitiple tables together with similar IDs:
+SELECT Products.Title, Product_Lines.pl_Title, Manufacturers.man_Title
+ FROM Products INNER JOIN Product_Lines ON Products.pl_ID = Product_Lines.pl_ID INNER JOIN Manufacturers ON Product_Lines.man_ID = Manufacturers.man_ID
+
+```
