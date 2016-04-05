@@ -4,14 +4,14 @@ Name :
 
 1. Number of males/ females - actors, directors, actresses (link with role_type, use gender attribute)
 2. Average / max / min number of movies dependent on gender ? (find number for actor/ actress) (link with role type and title)
-3. Cluster actors/ actresses to find people competing against each other (using similarity measured using country, genre of movie, production year, and maybe 
+3. Cluster actors/ actresses to find people competing against each other (using similarity measured using  genre of movie, production year, and maybe 
 
 Movie Companies :
 
 1. Number of companies (distribution/ production, etc.) for each country (use note attribute and link with company_type)
 2. Which company has produced/ distributed most number of movies - which country is it from ?
 3. Do companies produce/ distribute most movies only for specific actors? Which are they?
-4. 
+4. Top 10 movie companies which distribute/ produce most movies by country
 
 Movie Info :
 
