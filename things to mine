@@ -19,7 +19,10 @@ Where info typeid = 3 - it gives genre of movie
 
 1. Cluster by identifying which movie genres are most popular in what decades/ years ...?
 2. Visualization of frequency distribution of movie genres by decade / country for different genres (use info column from movie info)
-3. cluster tv series (number/ genre)
+3. cluster tv series (number/ genre)p
+
+Info type Id = 107 gives the movie grossing.
+1. Identify the profit by using the budget info type
 
 Link_Type :
 
