@@ -1,30 +1,57 @@
+1.
+SELECT distinct n.gender, n.name, r.role from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id limit 10;
+SELECT n.gender, n.name, r.role from name n, role_type r, cast_info c where r.id = c.role_id and n.id = c.person_id;
+
+2.
+SELECT distinct n.gender, n.name, r.role, t.title  
+from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id limit 10;
+
+3.
+SELECT distinct n.gender, n.name, r.role, t.title, t.production_year, m.info
+from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id INNER JOIN movie_info m ON m.id =  limit 10;
+
+
+4.
+select distinct cn.country_code, ct.kind 
+from company_name cn inner join mc.id 
+on ct.id = mc.company_type_id
+inner join company_name cn 
+on cn.id = mc.company_id;
+
+5.
+select distinct cn.id, cn.country_code, t.title
+from company_name cn inner join movie_companies  mc
+on cn.id = mc.company_id
+inner join title t
+on mc.movie_id = t.id;
+
 8. 
 
-SELECT M.INFO, T.PRODUCTION_YEAR,T.SERIES_YEARS
+SELECT distinct M.INFO, T.PRODUCTION_YEAR,T.SERIES_YEARS
 FROM movie_info M  INNER JOIN title T
 ON M.MOVIE_ID = T.ID
 WHERE M.INFO_TYPE_ID = 3 
-ORDER BY T.PRODUCTION_YEAR, T.SERIES_YEARS,M.INFO
+ORDER BY T.PRODUCTION_YEAR, T.SERIES_YEARS,M.INFO;
 
 10. 
     
-SELECT M.INFO,K.KIND,T.TITLE
+SELECT distinct M.INFO,K.KIND,T.TITLE
 FROM movie_info M JOIN title T JOIN kind_type K
 ON M.MOVIE_ID = T.ID AND K.ID = T.KIND_ID
 WHERE M.INFO_TYPE_ID = 3 AND T.KIND_ID IN (7,5,2)
-ORDER BY M.INFO
+ORDER BY M.INFO;
 
 11.
 
-SELECT M.INFO, T.TITLE
+SELECT distinct M.INFO, T.TITLE
 FROM movie_info M JOIN title T
 ON M.MOVIE_ID = T.ID
 WHERE M.INFO_TYPE_ID = 107
-ORDER BY M.INFO DESC
+ORDER BY M.INFO DESC;
 
 12. 
 
-select t1.title,t2.title,m.info 
+select distinct t1.title,t2.title,m.info 
 from movie_link l,title t1,title t2,movie_info m
  where link_type_id = 17 
  and t1.id = linked_movie_id 
