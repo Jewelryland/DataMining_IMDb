@@ -1,1 +1,34 @@
+8. 
 
+SELECT M.INFO, T.PRODUCTION_YEAR,T.SERIES_YEARS
+FROM movie_info M  INNER JOIN title T
+ON M.MOVIE_ID = T.ID
+WHERE M.INFO_TYPE_ID = 3 
+ORDER BY T.PRODUCTION_YEAR, T.SERIES_YEARS,M.INFO
+
+10. 
+    
+SELECT M.INFO,K.KIND,T.TITLE
+FROM movie_info M JOIN title T JOIN kind_type K
+ON M.MOVIE_ID = T.ID AND K.ID = T.KIND_ID
+WHERE M.INFO_TYPE_ID = 3 AND T.KIND_ID IN (7,5,2)
+ORDER BY M.INFO
+
+11.
+
+SELECT M.INFO, T.TITLE
+FROM movie_info M JOIN title T
+ON M.MOVIE_ID = T.ID
+WHERE M.INFO_TYPE_ID = 107
+ORDER BY M.INFO DESC
+
+12. 
+
+select t1.title,t2.title,m.info 
+from movie_link l,title t1,title t2,movie_info m
+ where link_type_id = 17 
+ and t1.id = linked_movie_id 
+ and t2.id = l.movie_id 
+ and m.info_type_id = 3 
+ and m.movie_id = t2.id 
+ order by t2.title;
