@@ -65,3 +65,6 @@ FROM movie_info M JOIN title T
 ON M.MOVIE_ID = T.ID
 WHERE M.INFO_TYPE_ID = 105
 ORDER BY M.INFO DESC;
+
+14. select count(movie_id) from movie_info where movie_id in (select movie_id from movie_info where info_type_id=107) and info_type_id=105;
+
