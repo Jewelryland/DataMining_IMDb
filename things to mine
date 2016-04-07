@@ -8,24 +8,23 @@ Name :
 
 Movie Companies :
 
-1. Number of companies (distribution/ production, etc.) for each country (use note attribute and link with company_type)
-2. Which company has produced/ distributed most number of movies - which country is it from ?
-3. Do companies produce/ distribute most movies only for specific actors? Which are they?
-4. Top 10 movie companies which distribute/ produce most movies by country
+4. Number of companies (distribution/ production, etc.) for each country (use note attribute and link with company_type)
+5. Which company has produced/ distributed most number of movies - which country is it from ?
+6. Do companies produce/ distribute most movies only for specific actors? Which are they?
+7. Top 10 movie companies which distribute/ produce most movies by country
 
 Movie Info :
 
 Where info typeid = 3 - it gives genre of movie
 
-1. Cluster by identifying which movie genres are most popular in what decades/ years ...?
-2. Visualization of frequency distribution of movie genres by decade / country for different genres (use info column from movie info)
-3. cluster tv series (number/ genre)p
+8. Cluster by identifying which movie genres are most popular in what decades/ years ...?
+9. Visualization of frequency distribution of movie genres by decade / country for different genres (use info column from movie info)
+10. cluster tv series (number/ genre)p
 
 Info type Id = 107 gives the movie grossing.
-1. Identify the profit by using the budget info type
+11. Identify the profit by using the budget info type
 
 Link_Type :
 
-1. Find which genre movies are translated into other languages the most (use link_type id = 17 ... alternate language version of)
-2. 
+12. Find which genre movies are translated into other languages the most (use link_type id = 17 ... alternate language version of) 
 
