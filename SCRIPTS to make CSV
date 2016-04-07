@@ -6,8 +6,13 @@ SELECT distinct n.gender, n.name, r.role, t.title
 from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id where n.gender is not null limit 2000000; 
 
 3.
-SELECT distinct n.gender, n.name, r.role, t.title, t.production_year, m.info
-from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id INNER JOIN movie_info m ON m.id = t.id where n.gender is not null and t.production_year is not null  limit 10;
+SELECT distinct n.gender, n.name, r.role, t.title, t.production_year, m.info 
+from name n INNER JOIN cast_info c ON n.id = c.person_id 
+INNER JOIN role_type r ON r.id = c.role_id 
+INNER JOIN title t ON t.id = c.movie_id 
+INNER JOIN movie_info m ON m.id = t.id 
+where n.gender is not null and t.production_year is not null limit 2000000 
+INTO OUTFILE '/usr/local/DbOutput/MiningTask3.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
 
 4.
