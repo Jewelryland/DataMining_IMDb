@@ -26,11 +26,10 @@ on mc.movie_id = t.id;
 
 8. 
 
-SELECT distinct M.INFO, T.PRODUCTION_YEAR,T.SERIES_YEARS
-FROM movie_info M  INNER JOIN title T
-ON M.MOVIE_ID = T.ID
-WHERE M.INFO_TYPE_ID = 3 and t.production_year is not null and t.series_years is not null 
-ORDER BY T.PRODUCTION_YEAR, T.SERIES_YEARS,M.INFO limit 10;
+SELECT distinct M.INFO, T.PRODUCTION_YEAR,T.SERIES_YEARS 
+FROM movie_info M  INNER JOIN title T ON M.MOVIE_ID = T.ID WHERE M.INFO_TYPE_ID = 3 and t.production_year is not null and t.series_years is not null  
+ORDER BY T.PRODUCTION_YEAR, T.SERIES_YEARS,M.INFO INTO OUTFILE '/usr/local/DbOutput/MiningTask8.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
 
 10. 
     
