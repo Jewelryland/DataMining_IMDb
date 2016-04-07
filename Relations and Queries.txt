@@ -85,3 +85,8 @@ MiningTask14:
 Movies which have both budget and gross as info.
 select count(movie_id) from movie_info where movie_id in (select movie_id from movie_info where info_type_id=107) and info_type_id=105;
 
+SELECT distinct M.INFO,M1.INFO, T.TITLE
+FROM movie_info M, movie_info M1, title T
+WHERE M.MOVIE_ID = T.ID AND M1.MOVIE_ID = M.MOVIE_ID AND
+M.INFO_TYPE_ID = 105 AND M1.INFO_TYPE_ID = 107
+ORDER BY T.TITLE DESC;
