@@ -28,6 +28,6 @@ Link_Type :
 
 12. Find which genre movies are translated into other languages the most (use link_type id = 17 ... alternate language version of) 
 
-13. Find movie budget via info_type_id = 105A
+13. Find movie budget via info_type_id = 105
 
 14. Movies which have both budget and gross as info.
