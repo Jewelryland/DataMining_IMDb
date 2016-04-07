@@ -58,3 +58,10 @@ from movie_link l,title t1,title t2,movie_info m
  and m.info_type_id = 3 
  and m.movie_id = t2.id 
  order by t2.title;
+ 
+13. 
+SELECT distinct M.INFO, T.TITLE
+FROM movie_info M JOIN title T
+ON M.MOVIE_ID = T.ID
+WHERE M.INFO_TYPE_ID = 105
+ORDER BY M.INFO DESC;
