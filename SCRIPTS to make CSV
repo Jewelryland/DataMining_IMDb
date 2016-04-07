@@ -3,7 +3,7 @@ SELECT distinct n.gender, n.name, r.role from name n INNER JOIN cast_info c ON n
 
 2.
 SELECT distinct n.gender, n.name, r.role, t.title  
-from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id where n.gender is not null limit 10; 
+from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id where n.gender is not null limit 2000000; 
 
 3.
 SELECT distinct n.gender, n.name, r.role, t.title, t.production_year, m.info
@@ -18,7 +18,7 @@ inner join company_name cn
 on cn.id = mc.company_id;
 
 5.
-select distinct cn.id, cn.country_code, t.title
+select distinct cn.country_code, t.title
 from company_name cn inner join movie_companies  mc
 on cn.id = mc.company_id
 inner join title t
