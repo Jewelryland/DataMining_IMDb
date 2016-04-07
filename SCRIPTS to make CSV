@@ -1,14 +1,13 @@
 1.
-SELECT distinct n.gender, n.name, r.role from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id limit 10;
-SELECT n.gender, n.name, r.role from name n, role_type r, cast_info c where r.id = c.role_id and n.id = c.person_id;
+SELECT distinct n.gender, n.name, r.role from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id where n.gender is not null; 
 
 2.
 SELECT distinct n.gender, n.name, r.role, t.title  
-from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id limit 10;
+from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id where n.gender is not null limit 10; 
 
 3.
 SELECT distinct n.gender, n.name, r.role, t.title, t.production_year, m.info
-from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id INNER JOIN movie_info m ON m.id =  limit 10;
+from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id INNER JOIN title t ON t.id = c.movie_id INNER JOIN movie_info m ON m.id = t.id where n.gender is not null and t.production_year is not null  limit 10;
 
 
 4.
@@ -30,8 +29,8 @@ on mc.movie_id = t.id;
 SELECT distinct M.INFO, T.PRODUCTION_YEAR,T.SERIES_YEARS
 FROM movie_info M  INNER JOIN title T
 ON M.MOVIE_ID = T.ID
-WHERE M.INFO_TYPE_ID = 3 
-ORDER BY T.PRODUCTION_YEAR, T.SERIES_YEARS,M.INFO;
+WHERE M.INFO_TYPE_ID = 3 and t.production_year is not null and t.series_years is not null 
+ORDER BY T.PRODUCTION_YEAR, T.SERIES_YEARS,M.INFO limit 10;
 
 10. 
     
