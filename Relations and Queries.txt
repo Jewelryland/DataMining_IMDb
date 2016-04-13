@@ -126,3 +126,7 @@ select distinct t.id, t.production_year, m1.info, m2.info from title t, movie_in
 movie_info m2 where m1.info_type_id = 1 and m2.info_type_id = 3 and 
 m1.movie_id = t.id and m1.movie_id = m2.movie_id and t.kind_id in (7) 
 
+
+Mining task 3 (modification??)
+
+select t.production_year, k.kind from title t join kind_type k on t.kind_id = k.id
