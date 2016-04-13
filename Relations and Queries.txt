@@ -102,3 +102,27 @@ select distinct movie_id, info from movie_info where info_type_id=1 order by mov
 select distinct t.id, t.production_year, m1.info, m2.info from title t, movie_info m1, 
 movie_info m2 where m1.info_type_id = 1 and m2.info_type_id = 3 and 
 m1.movie_id = t.id and m1.movie_id = m2.movie_id
+
+
+| id | kind           |
++----+----------------+
+|  1 | movie          |
+|  2 | tv series      |
+|  3 | tv movie       |
+|  4 | video movie    |
+|  5 | tv mini series |
+|  6 | video game     |
+|  7 | episode        |
+
+to give only movies (and eliminating tv series... ) :
+
+select distinct t.id, t.production_year, m1.info, m2.info from title t, movie_info m1, 
+movie_info m2 where m1.info_type_id = 1 and m2.info_type_id = 3 and 
+m1.movie_id = t.id and m1.movie_id = m2.movie_id and t.kind_id in (1, 3, 4)
+
+for episodes(can add 2, 5 if its data makes sense) :
+
+select distinct t.id, t.production_year, m1.info, m2.info from title t, movie_info m1, 
+movie_info m2 where m1.info_type_id = 1 and m2.info_type_id = 3 and 
+m1.movie_id = t.id and m1.movie_id = m2.movie_id and t.kind_id in (7) 
+
