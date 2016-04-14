@@ -147,3 +147,19 @@ FROM company_name cn inner join movie_companies  mc
 on cn.id = mc.company_id , movie_info M1, movie_info M2, movie_info M3  INNER JOIN title T ON M1.MOVIE_ID = T.ID AND M1.MOVIE_ID = M.MOVIE_ID WHERE cn.country_code = [us], M1.INFO_TYPE_ID = 3, M2.INFO_TYPE_ID = 105, M3.INFO_TYPE_ID = 107 and t.production_year  is not null 
 ORDER BY T.PRODUCTION_YEAR,M.INFO INTO OUTFILE '/usr/local/DbOutput/MiningTask8.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 
+Could not really modify the above query so added the below one instead 
+(IMP NOTE***** :  add the order by and the write to outfile part to it, also do NOT add distinct clause since we are not using title.id.)
+
+| id  | info   |
++-----+--------+
+| 105 | budget |
+|   3 | genres |
+| 107 | gross  |
++-----+--------+
+
+SELECT t.production_year, m1.info, m2.info, m3.info
+from title t, movie_info m1, movie_info m2, movie_info m3
+where t.kind_id = 1 
+and m1.movie_id = t.id and m2.movie_id = t.id and m3.movie_id = t.id
+and m1.info_type_id = 105 and m2.info_type_id = 107 and m3.info_type_id = 3
+and t.production_year is not NULL 
