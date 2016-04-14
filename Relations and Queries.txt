@@ -137,3 +137,13 @@ INNER JOIN role_type r ON r.id = c.role_id
 INNER JOIN title t ON t.id = c.movie_id 
 INNER JOIN movie_info m ON m.id = t.id 
 INNER JOIN kind_type k ON t.kind_id = k.id 
+
+
+
+ production_year, country_name,company_name, budget ang gross, rating, genre
+ 
+ SELECT distinct  M1.INFO, M2.INFO, M3.INFO T.PRODUCTION_YEAR,  
+FROM company_name cn inner join movie_companies  mc
+on cn.id = mc.company_id , movie_info M1, movie_info M2, movie_info M3  INNER JOIN title T ON M1.MOVIE_ID = T.ID AND M1.MOVIE_ID = M.MOVIE_ID WHERE cn.country_code = [us], M1.INFO_TYPE_ID = 3, M2.INFO_TYPE_ID = 105, M3.INFO_TYPE_ID = 107 and t.production_year  is not null 
+ORDER BY T.PRODUCTION_YEAR,M.INFO INTO OUTFILE '/usr/local/DbOutput/MiningTask8.csv' FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
+
