@@ -3,6 +3,7 @@
 For installing IMDBPy
 ```pip install imdbpy```
 
-For installating ImdbPie
+
+For installing ImdbPie
 
 ```pip install imdbpie```
