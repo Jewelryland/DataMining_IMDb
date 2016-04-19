@@ -10,7 +10,13 @@ For installing ImdbPie
 
 
 For fetching the top 250 movie data
-``` from from imdbpie import Imdb```
-``` imdb = Imdb() ```
-``` imdb = Imdb(cache=True)```
-```  imdb.top_250() A ```
+
+```
+from from imdbpie import Imdb
+
+imdb = Imdb()
+
+imdb = Imdb(cache=True)
+
+imdb.top_250() A 
+```
