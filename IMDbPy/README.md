@@ -18,5 +18,6 @@ imdb = Imdb()
 
 imdb = Imdb(cache=True)
 
-imdb.top_250() A 
+imdb.top_250() 
 ```
+
