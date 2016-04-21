@@ -31,6 +31,7 @@ for line in content:
 		currencies.append(str(match.group(4)))
 	element = line.split(',')
 print(count)
+#this prints count of the currencies occuring. Looking at the count specific currencies could be filtered. This script keeps only $
 uniquecurrencies = set(currencies)
 print(Counter(currencies))
 print(uniquecurrencies)
