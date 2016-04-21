@@ -2,14 +2,19 @@ import csv
 import sys
 import re
 from collections import Counter
-#sys.setdefaultencoding("utf-8")
 with open('GrossBudgetFinal.csv',encoding = "utf8") as csvfile:
 	content = csvfile.readlines()
 print(len(content))
 count = 0
 #content2 = []
 regex = r"(\d+),([^\d]{1,5})(\d+),([^\d]{1,5})(\d+)-\((\w+)\)(-.+-|-\()(\d{4})\),(.+)"
-#([^\d]{1,5})(\d+)-\((\w+)\)-.+-(\d{4})\),(.+)"
+
+#([^\d]{1,5})(\d+)-\((\w+)\)-.+-(\d{4})\),(.+)" ... this regex cleans file with only gross, the above one cleans with 
+# rows in format of titleid, budget, gross-country-date, title
+# example INPUT : 3355239,$1500000,$373967-(USA)-(14-October-2001),Session-9
+# NOTE: this input may not have the day and month, this case is handled in the regex
+# OUTPUT for above : 1500000,373967,USA,2001,Session-9
+
 outputcsv = open('outputcsv2.csv','r+',encoding='utf8')
 previoustitle = ""
 currencies = []
@@ -25,10 +30,6 @@ for line in content:
 		previoustitle = str(match.group(9))
 		currencies.append(str(match.group(4)))
 	element = line.split(',')
-	#if(count > 20):
-	#	break
-		#print(element)
-	#content2.append(element)
 print(count)
 uniquecurrencies = set(currencies)
 print(Counter(currencies))
