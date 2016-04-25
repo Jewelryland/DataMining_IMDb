@@ -20,7 +20,7 @@ For getting a formatted output-
 mysql> Select * from table_name \G
 ```
 
-For outputing the query results intoa file
+For outputing the query results into a file
 
 ```
 select * from aka_name INTO OUTFILE '/home/saish/Documents/DataMining/Project/aka_name.csv'
@@ -32,7 +32,6 @@ LINES TERMINATED BY '\n'
 select name,count(id) from name group by name having count(id)>1;
 ```
 Example of joining mulitiple tables together with similar IDs:
-SELECT Products.Title, Product_Lines.pl_Title, Manufacturers.man_Title
- FROM Products INNER JOIN Product_Lines ON Products.pl_ID = Product_Lines.pl_ID INNER JOIN Manufacturers ON Product_Lines.man_ID = Manufacturers.man_ID
-
+```
+SELECT distinct n.gender, n.name, r.role from name n INNER JOIN cast_info c ON n.id = c.person_id INNER JOIN role_type r ON r.id = c.role_id where n.gender is not null; 
 ```
